@@ -20,6 +20,6 @@ if ($image) {
 }
 
 Write-Host "Building new image: $imageName"
-docker build -t $imageName .
+docker build --no-cache -t $imageName .
 
 Write-Host "Build completed successfully!"
