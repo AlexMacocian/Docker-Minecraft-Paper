@@ -32,6 +32,8 @@ $itemsToRestore = @(
     "spigot.yml",
     "usercache.json",
     "whitelist.json",
+    "version_history.json",
+    "config",
     "world",
     "world_nether",
     "world_the_end"

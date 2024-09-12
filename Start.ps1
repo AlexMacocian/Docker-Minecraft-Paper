@@ -1,5 +1,5 @@
 $containerName = "minecraft-server"
-$imageName = "minecraft-spigot:latest"
+$imageName = "minecraft-paper:latest"
 
 $container = docker ps -a --filter "name=$containerName" --format "{{.ID}}"
 if ($container) {
@@ -17,7 +17,7 @@ if ($container) {
         -v "$(pwd)/plugins:/minecraft/plugins" `
         -v "$(pwd)/logs:/minecraft/logs" `
         --restart unless-stopped `
-        minecraft-spigot
+        minecraft-paper
 
     Write-Host "Starting the container '$containerName'..."
     docker start $containerName

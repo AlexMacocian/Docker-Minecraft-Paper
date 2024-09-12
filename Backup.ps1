@@ -24,6 +24,8 @@ $itemsToBackup = @(
     "/minecraft/spigot.yml",
     "/minecraft/usercache.json",
     "/minecraft/whitelist.json",
+    "/minecraft/version_history.json",
+    "/minecraft/config",
     "/minecraft/world",
     "/minecraft/world_nether",
     "/minecraft/world_the_end"
@@ -33,7 +35,7 @@ foreach ($item in $itemsToBackup) {
     $itemName = [System.IO.Path]::GetFileName($item)
     $destination = "$backupDir/$itemName"
     Write-Host "Backing up $item to $destination"
-    if ($item -like "*/world*" -or $item -eq "/minecraft/world" -or $item -eq "/minecraft/world_nether" -or $item -eq "/minecraft/world_the_end") {
+    if ($item -like "*/world*" -or $item -like "*/config*") {
         Write-Host "Backing up directory $item"
         docker cp "$($containerName):$($item)" "$($backupDir)/"
     } else {

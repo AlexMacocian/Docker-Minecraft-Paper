@@ -1,5 +1,5 @@
 $containerName = "minecraft-server"
-$imageName = "minecraft-spigot:latest"
+$imageName = "minecraft-paper:latest"
 
 $container = docker ps -a --filter "name=$containerName" --format "{{.ID}}"
 if ($container) {
