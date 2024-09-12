@@ -13,7 +13,6 @@
 - Edit your server files in the `backup` directory. *Edit stuff such as password, commands, etc.* **The container needs to exist for this to work**
 - Run `Restore.ps1` to restore your modified files into the container. **The container needs to run for this to work**
 - Run `Start.ps1`
-- Check `logs` folder for logs. `output.log` and `error.log` contain the *stdout* and *stderr* of the java process
 
 ## Script glossary
 
