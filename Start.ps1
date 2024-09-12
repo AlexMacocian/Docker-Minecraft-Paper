@@ -18,7 +18,11 @@ if ($container) {
         -v "$(pwd)/plugins:/minecraft/plugins" `
         -v "$(pwd)/logs:/minecraft/logs" `
         --restart unless-stopped `
-        minecraft-paper
+        --health-cmd "nc -z localhost 25565 || exit 99" `
+        --health-interval 30s `
+        --health-timeout 10s `
+        --health-retries 1 `
+        $imageName
 
     Write-Host "Starting the container '$containerName'..."
     docker start $containerName

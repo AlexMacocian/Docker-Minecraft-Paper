@@ -40,5 +40,4 @@ CMD /bin/sh -c ' \
     echo Fixing ownership of minecraft directory... && \
     chown -R mcuser:mcgroup /minecraft && \
     echo Starting minecraft server as mcuser && \
-    su - mcuser -c "cd /minecraft/ && java -Xmx2G -Xms512M -jar /minecraft/paper.jar nogui" && \
-    sleep 1727313' > /minecraft/logs/stdout.log 2> /minecraft/logs/stderr.log
+    su - mcuser -c "cd /minecraft/ && java -Xmx2G -Xms512M -jar /minecraft/paper.jar nogui"'
