@@ -14,6 +14,7 @@ if ($container) {
     Write-Host "The container '$containerName' does not exist. Creating it..."
     docker create --name $containerName `
         -p 25565:25565 `
+        -p 8123:8123 `
         -v "$(pwd)/plugins:/minecraft/plugins" `
         -v "$(pwd)/logs:/minecraft/logs" `
         --restart unless-stopped `

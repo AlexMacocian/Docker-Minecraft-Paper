@@ -34,6 +34,7 @@ RUN addgroup -S mcgroup && adduser -S mcuser -G mcgroup -s /bin/sh \
 WORKDIR /minecraft
 
 EXPOSE 25565
+EXPOSE 8123
 
 CMD /bin/sh -c ' \
     echo Fixing ownership of minecraft directory... && \
