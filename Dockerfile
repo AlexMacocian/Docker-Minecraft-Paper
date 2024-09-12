@@ -25,7 +25,7 @@ FROM alpine:latest AS runner
 
 COPY --from=builder /minecraft /minecraft
 
-RUN apk add --no-cache openjdk21-jre eudev
+RUN apk add --no-cache openjdk21-jre eudev libstdc++
 
 RUN addgroup -S mcgroup && adduser -S mcuser -G mcgroup -s /bin/sh \ 
     && chown -R mcuser:mcgroup /minecraft \
