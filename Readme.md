@@ -5,14 +5,16 @@
 ## First run
 
 - Run `Build.ps1` to build the image
-- Run `mkdir plugins`
-- Copy your plugins into `plugins` folder
 - Run `Start.ps1`
 - Run `Backup.ps1`
 - Run `Stop.ps1`
 - Edit your server files in the `backup` directory. *Edit stuff such as password, commands, etc.* **The container needs to exist for this to work**
 - Run `Restore.ps1` to restore your modified files into the container. **The container needs to run for this to work**
 - Run `Start.ps1`
+
+## Configuration
+
+Adjust the minecraft server configuration that is mounted in `/server-files` relative to the directory where the dockerfile is located
 
 ## Script glossary
 
