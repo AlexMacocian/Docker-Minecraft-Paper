@@ -12,10 +12,6 @@
 - Run `Restore.ps1` to restore your modified files into the container. **The container needs to run for this to work**
 - Run `Start.ps1`
 
-## Configuration
-
-Adjust the minecraft server configuration that is mounted in `/server-files` relative to the directory where the dockerfile is located
-
 ## Script glossary
 
 ### `Build.ps1` to build the docker image

@@ -15,7 +15,8 @@ if ($container) {
     docker create --name $containerName `
         -p 25565:25565 `
         -p 8123:8123 `
-        -v "$(pwd)/server-files:/minecraft/" `
+        -v "$(pwd)/plugins:/minecraft/plugins" `
+        -v "$(pwd)/logs:/minecraft/logs" `
         --restart unless-stopped `
         --health-cmd "nc -z localhost 25565 || exit 99" `
         --health-interval 30s `
